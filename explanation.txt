@@ -1,0 +1,50 @@
+
+
+1. Import Flask
+        │
+        ▼
+2. Create Flask app
+        │
+        ▼
+3. Register the "/" URL with the home() function
+        │
+        ▼
+4. Start the web server
+        │
+        ▼
+5. User visits:
+   http://127.0.0.1:5000/
+        │
+        ▼
+6. Flask calls home()
+        │
+        ▼
+7. home() returns HTML
+        │
+        ▼
+8. Browser displays the web page
+
+
+# Import the Flask class from the Flask package
+from flask import Flask
+
+# Create a Flask application object
+# __name__ tells Flask where this application file is located
+app = Flask(__name__)
+
+# Define a route for the home page ("/")
+# When a user visits http://127.0.0.1:5000/
+# Flask will execute the home() function
+@app.route("/")
+def home():
+    # Return HTML content to the user's browser
+    return "<h1>Hello from Flask!</h1><p>Your Python website is working.</p>"
+
+# This block runs only when this file is executed directly
+# It will not run if this file is imported into another Python file
+if __name__ == "__main__":
+    # Start the Flask development server
+    # debug=True:
+    # - Automatically reloads the server when code changes
+    # - Shows detailed error messages if an error occurs
+    app.run(debug=True)

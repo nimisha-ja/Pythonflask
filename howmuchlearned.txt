@@ -1,0 +1,66 @@
+Based on your Flask project, you already understand:
+
+✅ Python basics
+Variables:
+name = request.form["name"]
+Functions:
+def get_db_connection():
+Importing modules:
+import mysql.connector
+Comments
+Indentation rules
+✅ Python control and logic
+Function calls:
+cursor.execute()
+Returning values:
+return render_template("index.html")
+Working with lists:
+rows = cursor.fetchall()
+Looping (through users in Jinja templates):
+{% for user in users %}
+✅ Database programming
+
+You learned how Python talks to MySQL:
+
+db = get_db_connection()
+cursor = db.cursor()
+cursor.execute(...)
+db.commit()
+
+You can now:
+
+Insert data
+Read data
+Update data
+Delete data
+
+That is a major skill.
+
+✅ Flask framework basics
+
+You learned:
+
+Creating an app:
+app = Flask(__name__)
+Creating routes:
+@app.route("/")
+Handling GET requests:
+@app.route("/users")
+Handling POST requests:
+@app.route("/save", methods=["POST"])
+Getting form data:
+request.form["name"]
+Using templates:
+render_template("users.html")
+✅ CRUD application knowledge
+
+You are now building a real application:
+
+Create → Add user
+Read → Display users
+Update → Edit user
+Delete → Remove user
+
+This is the foundation of many business applications.
+
+Your current level (rough estimate
